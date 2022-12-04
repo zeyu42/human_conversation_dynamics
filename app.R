@@ -29,26 +29,12 @@ header <- dashboardHeader(title = "Human Conversation Dynamics")
 sidebar <- dashboardSidebar(
   sidebarMenu(
     id = "tabs",
-    menuItem("Global Overview", tabName = "overview"),
-    menuItem("Country Overview", tabName = "country"),
     menuItem("Country Details", tabName = "countryYear"),
-    menuItem("Country Pair", tabName = "pair"),
     menuItem("About", tabName = "about")
   )
 )
 body <- dashboardBody(
   tabItems(
-    # First tab content
-    tabItem(
-      tabName = "overview",
-      h2("Widgets tab content")
-    ),
-    
-    # Second tab content
-    tabItem(
-      tabName = "country",
-      h2("Tab two")
-    ),
 
     # Third tab content
     tabItem(
@@ -68,12 +54,6 @@ body <- dashboardBody(
         box(title = "Outgoing (retweeted by)", dataTableOutput("outgoingTableCountryYear"), status = "primary"),
         box(title = "Incoming (retweeting)", dataTableOutput("incomingTableCountryYear"), status = "primary")
       )
-    ),
-
-    # Fourth tab content
-    tabItem(
-      tabName = "pair",
-      h2("Tables tab content")
     ),
     
     # Fifth tab content
@@ -135,10 +115,10 @@ server <- function(input, output, session) {
       
       # Display everything, data frames first, then maps
       output$outgoingTableCountryYear <- renderDataTable({
-        datatable(data_in, options = list(pageLength = 20, order = list(1, 'desc')))
+        datatable(data_out, options = list(pageLength = 20, order = list(1, 'desc')))
       })
       output$incomingTableCountryYear <- renderDataTable({
-        datatable(data_out, options = list(pageLength = 20, order = list(1, 'desc')))
+        datatable(data_in, options = list(pageLength = 20, order = list(1, 'desc')))
       })
      
       map_out_proxy %>% clearShapes() %>% clearControls() %>%
