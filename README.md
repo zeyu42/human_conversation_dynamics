@@ -1,4 +1,4 @@
-# human_conversation_dynamics
+# Human Conversation Dynamics
 
 A shiny app that visualizes human conversation dynamics based on a 10-year subscription of 1% Twitter stream.
 
@@ -12,3 +12,5 @@ What I did:
 Data sources:
 1. Twitter data: [Archive Team: The Twitter Stream Grab](https://archive.org/details/twitterstream)
 2. Shapes of countries (regions) (stored in `data/countries.RDS` to accelerate the loading process): [World Bank Official Boundaries](https://datacatalog.worldbank.org/search/dataset/0038272/World-Bank-Official-Boundaries)
+
+![A screenshot of the app](screenshot.jpg "Screenshot")
