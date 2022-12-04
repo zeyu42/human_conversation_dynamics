@@ -79,7 +79,10 @@ body <- dashboardBody(
     # Fifth tab content
     tabItem(
       tabName = "about",
-      h2("About")
+      h2("About"),
+      "Visit the",
+      a(href = "https://github.com/zeyu42/human_conversation_dynamics", "Github repo"),
+      "for an introduction to this app."
     )
   )
 )
