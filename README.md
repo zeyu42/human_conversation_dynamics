@@ -2,9 +2,9 @@
 
 A shiny app that visualizes human conversation dynamics based on a 10-year subscription of 1% Twitter stream.
 
-The easiest way to use the app is simply go to here: https://zzeyu42.shinyapps.io/human_conversation_dynamics/
+Go here for a publicly hosted instance of this app: https://zzeyu42.shinyapps.io/human_conversation_dynamics/
 
-This will lead to a publicly hosted instance of this app. However, since I am using a free plan of the hosting service, the monthly uptime is limited. It is also easy to run it locally, especially if you're an R user (See [How to run on my local machine?](#how-to-run-on-my-local-machine) for instructions).
+However, since I am using a free plan of the hosting service, the monthly uptime is limited (25 hours). Alternatively, you can run your local instance of the app, which should significantly boost the performance of the app. It is also easy to run it locally, especially if you're an R user (See [How to run on my local machine?](#how-to-run-on-my-local-machine) for instructions).
 
 ## What I did
 
