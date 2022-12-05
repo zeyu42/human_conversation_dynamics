@@ -2,5 +2,7 @@
 *.json
 .RData
 .Rhistory
+.Rproj.user
+*.Rproj
 
 rsconnect/
