@@ -46,13 +46,13 @@ body <- dashboardBody(
       ),
       # Two map plots, the first outgoing, the second incoming
       fluidRow(
-        box(title = "Outgoing (retweeted by)", leafletOutput("outgoingMapCountryYear", height = 400), status = "primary"),
-        box(title = "Incoming (retweeting)", leafletOutput("incomingMapCountryYear", height = 400), status = "primary")
+        box(title = "Export (retweeted by)", leafletOutput("outgoingMapCountryYear", height = 400), status = "primary"),
+        box(title = "Import (retweeting)", leafletOutput("incomingMapCountryYear", height = 400), status = "primary")
       ),
       # Two lists, the first outgoing, the second incoming
       fluidRow(
-        box(title = "Outgoing (retweeted by)", dataTableOutput("outgoingTableCountryYear"), status = "primary"),
-        box(title = "Incoming (retweeting)", dataTableOutput("incomingTableCountryYear"), status = "primary")
+        box(title = "Export (retweeted by)", dataTableOutput("outgoingTableCountryYear"), status = "primary"),
+        box(title = "Import (retweeting)", dataTableOutput("incomingTableCountryYear"), status = "primary")
       )
     ),
     
