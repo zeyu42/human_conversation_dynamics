@@ -72,7 +72,7 @@ sidebar <- dashboardSidebar(
     menuItem("Export", tabName = "exportYear"),
     menuItem("Net Export", tabName = "netExportYear"),
     menuItem("Globality", tabName = "globalityYear"),
-    menuItem("Country Details", tabName = "countryYear"),
+    menuItem("Per Country", tabName = "countryYear"),
     menuItem("About", tabName = "about")
   )
 )
