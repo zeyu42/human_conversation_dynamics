@@ -204,7 +204,7 @@ server <- function(input, output, session) {
     if (input$tabs == "countryYear" && input$countryCountryYear != "") {
       # Prepare incoming and outgoing data frames
       data_in <- out2in[[input$yearCountryYear - 2010]][name2code[input$countryCountryYear]]
-      data_out <- t(as.data.frame(out2in[[input$yearCountryYear - 2010]][name2code[input$countryCountryYear],]))
+      data_out <- base::t(as.data.frame(out2in[[input$yearCountryYear - 2010]][name2code[input$countryCountryYear],]))
       colnames(data_out) <- "Count"
       data_out <- as.data.frame(data_out)
       data_out$`Country (region)` <- rownames(data_in)
