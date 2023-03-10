@@ -331,8 +331,8 @@ server <- function(input, output, session) {
         )
     }
     else if (input$tabs == "globalityYear") {
-      import <- colSums(out2in[[input$yearImportYear - 2010]]) - diag(as.matrix(out2in[[input$yearImportYear - 2010]]))
-      total <- colSums(out2in[[input$yearImportYear - 2010]])
+      import <- colSums(out2in[[input$yearGlobalityYear - 2010]]) - diag(as.matrix(out2in[[input$yearGlobalityYear - 2010]]))
+      total <- colSums(out2in[[input$yearGlobalityYear - 2010]])
       globality <- import / total
       globality <- as.data.frame(globality)
       colnames(globality) <- "Count"
@@ -353,7 +353,7 @@ server <- function(input, output, session) {
           label = ~ paste0(`Country (region)`, ": ", format(globality, big.mark = ",", scientific = FALSE))
         ) %>%
         addLegend(
-          data = countries, title = "Count", position = "bottomleft", pal = globality_pal, values =  ~globality, opacity = 0.7
+          data = countries, title = "Globality", position = "bottomleft", pal = globality_pal, values =  ~globality, opacity = 0.7
         )
     }
   })
