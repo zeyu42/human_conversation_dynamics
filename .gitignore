@@ -4,5 +4,7 @@
 .Rhistory
 .Rproj.user
 *.Rproj
+plot_static_maps.R
 
 rsconnect/
+static_maps/
